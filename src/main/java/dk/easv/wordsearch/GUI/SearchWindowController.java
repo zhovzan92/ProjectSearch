@@ -1,6 +1,7 @@
 package dk.easv.wordsearch.GUI;
 
 import dk.easv.wordsearch.BLL.FileManager;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
@@ -28,7 +29,13 @@ public class SearchWindowController {
     @FXML
     private Label lblSearchResult;
 
-    public SearchWindowController() throws IOException {
+    ArrayList<String> data;
+
+    public SearchWindowController(){
+
+    }
+
+    public void initialize() throws IOException {
         loadData();
     }
 
@@ -47,10 +54,13 @@ public class SearchWindowController {
 
     private void loadData() throws IOException {
         FileManager fileManager = new FileManager();
-        ArrayList<String> data = fileManager.readFile("src/main/resources/dk/easv/wordsearch/brit-a-z.txt");
-        for(String word : data){
-            System.out.println(word);
-        }
+        data = fileManager.readFile("src/main/resources/dk/easv/wordsearch/brit-a-z.txt");
+        generateWordList();
     }
 
+    private void generateWordList(){
+        for(String word : data){
+            lvWordList.getItems().add(word);
+        }
+    }
 }
