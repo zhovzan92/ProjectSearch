@@ -9,21 +9,15 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.util.ArrayList;
+
 
 public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("WordSearch.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
+        Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("WordSearch");
         stage.setScene(scene);
         stage.show();
-
-        FileManager fileManager = new FileManager();
-        ArrayList<String> data = fileManager.readFile("src/main/resources/dk/easv/wordsearch/brit-a-z.txt");
-        for(String word : data){
-            System.out.println(word);
-        }
     }
 }
