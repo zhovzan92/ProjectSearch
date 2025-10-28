@@ -1,4 +1,4 @@
-package dk.easv.wordsearch;
+package dk.easv.wordsearch.GUI;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
