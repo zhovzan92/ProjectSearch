@@ -13,7 +13,6 @@ public class SearchWindowController {
     private ListView lvWordList;
     @FXML
     private TextField txtWordSearchInput;
-
     @FXML
     private ListView lvNWordList;
     @FXML
