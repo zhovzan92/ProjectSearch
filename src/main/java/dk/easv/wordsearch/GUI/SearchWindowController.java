@@ -13,8 +13,7 @@ public class SearchWindowController {
     private ListView lvWordList;
     @FXML
     private TextField txtWordSearchInput;
-    @FXML
-    private ListView lvAWorsList;
+
     @FXML
     private ListView lvNWordList;
     @FXML
@@ -23,6 +22,8 @@ public class SearchWindowController {
     private Label lblTotalWordCount;
     @FXML
     private Label lblSearchResult;
+    @FXML
+    private ListView lvAWordsList;
 
     @FXML
     protected void onHelloButtonClick() {
@@ -36,4 +37,13 @@ public class SearchWindowController {
     @FXML
     private void onClickClearHistory(ActionEvent actionEvent) {
     }
+
+    @FXML
+    private void onClickShowAWords(ActionEvent actionEvent) {
+    }
+
+    @FXML
+    private void onClickShowNWord(ActionEvent actionEvent) {
+    }
+    /*private WordsLogic wordsLogic=new WordsLogic()*/
 }
