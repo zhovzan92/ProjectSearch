@@ -6,9 +6,6 @@ import java.util.Scanner;             // Import the Scanner class to read text f
 
     public class FileData {
 
-        public FileData(){
-
-        }
 
         public boolean fileExists(String filePath){
             File file = new File(filePath);
